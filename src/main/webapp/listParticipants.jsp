@@ -1,7 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.List" %>
 <%@ page import="com.zumba.model.Participant" %>
-<%@ page import="com.zumba.util.DatabaseUtil" %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,10 +16,9 @@
             <th>Batch ID</th>
         </tr>
         <%
-            List<Participant> participants = null; // Initialize with null, will be populated from the database
-            // Example: participants = DatabaseUtil.getParticipants(); // Fetch participants from the database
-            if (participants != null && !participants.isEmpty()) { // Check if participants is not null and not empty
-                for (Participant participant : participants) { // Iterate over participants
+            List<Participant> participants = (List<Participant>) request.getAttribute("participants");
+            if (participants != null && !participants.isEmpty()) {
+                for (Participant participant : participants) {
         %>
         <tr>
             <td><%= participant.getId() %></td>
