@@ -15,7 +15,9 @@ import java.util.List;
 
 @WebServlet("/batches")
 public class BatchesServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         String timing = request.getParameter("timing");
 
@@ -31,6 +33,7 @@ public class BatchesServlet extends HttpServlet {
         }
         response.sendRedirect("batches.html"); // Redirect to form page after insertion
     }
+
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Batch> batches = new ArrayList<>();
@@ -49,4 +52,3 @@ public class BatchesServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        request.set
