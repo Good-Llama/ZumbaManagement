@@ -1,21 +1,51 @@
-package com.zumba.model;
+package model;
 
 public class Participant {
-    private int id;
+    private int participantId;
     private String name;
     private String email;
     private int batchId;
 
+    // Constructors
+    public Participant() {}
+
+    public Participant(int participantId, String name, String email, int batchId) {
+        this.participantId = participantId;
+        this.name = name;
+        this.email = email;
+        this.batchId = batchId;
+    }
+
     // Getters and Setters
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public int getParticipantId() {
+        return participantId;
+    }
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public void setParticipantId(int participantId) {
+        this.participantId = participantId;
+    }
 
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
+    public String getName() {
+        return name;
+    }
 
-    public int getBatchId() { return batchId; }
-    public void setBatchId(int batchId) { this.batchId = batchId; }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getBatchId() {
+        return batchId;
+    }
+
+    public void setBatchId(int batchId) {
+        this.batchId = batchId;
+    }
 }

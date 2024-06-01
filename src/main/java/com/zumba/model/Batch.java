@@ -1,17 +1,41 @@
-package com.zumba.model;
+package model;
 
 public class Batch {
-    private int id;
-    private String name;
+    private int batchId;
+    private String batchName;
     private String timing;
 
+    // Constructors
+    public Batch() {}
+
+    public Batch(int batchId, String batchName, String timing) {
+        this.batchId = batchId;
+        this.batchName = batchName;
+        this.timing = timing;
+    }
+
     // Getters and Setters
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public int getBatchId() {
+        return batchId;
+    }
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public void setBatchId(int batchId) {
+        this.batchId = batchId;
+    }
 
-    public String getTiming() { return timing; }
-    public void setTiming(String timing) { this.timing = timing; }
+    public String getBatchName() {
+        return batchName;
+    }
+
+    public void setBatchName(String batchName) {
+        this.batchName = batchName;
+    }
+
+    public String getTiming() {
+        return timing;
+    }
+
+    public void setTiming(String timing) {
+        this.timing = timing;
+    }
 }
